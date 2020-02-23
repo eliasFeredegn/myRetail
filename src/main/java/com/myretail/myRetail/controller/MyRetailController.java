@@ -1,7 +1,7 @@
-package com.myretail.myRetail.Controller;
+package com.myretail.myRetail.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.myretail.myRetail.Model.Product;
+import com.myretail.myRetail.dao.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +23,7 @@ public class MyRetailController {
     public ResponseEntity<Product> getproducts(@RequestParam("productId") int productId) throws Exception{
         logger.info("MyRetailController.java --> getProducts/{id}() :: START ");
         ObjectMapper objectMapper = new ObjectMapper();
-        logger.info("BenefitApiController.java --> getBenefitResponse() :: END "
+        logger.info("MyRetailController.java --> getProducts/{id}() :: END "
                 + objectMapper.writeValueAsString(product));
         return new ResponseEntity<Product>(product, HttpStatus.OK);
     }
