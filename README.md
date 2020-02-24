@@ -13,3 +13,17 @@ Using postman, you can test the following endpoints:
 •	Post method, localhost:8080/products. Gets json request and saves it.
 
 •	Put method, localhost:8080/products/{id} to update product by id
+
+# Sample screenshots
+
+CREATE A PRODUCT
+![](images/create.png)
+
+GET ALL PRODUCTS
+![](images/allProducts.png)
+
+GET PRODUCT BY ID
+![](images/productById.png)
+
+UPDATE PRODUCT
+![](images/updateProduct.png)
