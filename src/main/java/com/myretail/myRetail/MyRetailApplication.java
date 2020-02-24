@@ -3,7 +3,8 @@ package com.myretail.myRetail;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+
+@SpringBootApplication(scanBasePackages={"com.myretail.myRetail", "com.myretail.myRetail.dao"})
 public class MyRetailApplication {
 
 	public static void main(String[] args) {
