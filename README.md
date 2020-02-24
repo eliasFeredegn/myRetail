@@ -17,13 +17,13 @@ Using postman, you can test the following endpoints:
 # Sample screenshots
 
 CREATE A PRODUCT
-![](images/create.png)
+![](images/create.PNG)
 
 GET ALL PRODUCTS
-![](images/allProducts.png)
+![](images/allProducts.PNG)
 
 GET PRODUCT BY ID
-![](images/productById.png)
+![](images/productById.PNG)
 
 UPDATE PRODUCT
-![](images/updateProduct.png)
+![](images/updateProduct.PNG)
