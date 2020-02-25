@@ -4,10 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -17,6 +14,7 @@ public class Product implements Serializable {
 
     @Id
     @Column(name="PRODUCT_ID")
+    @GeneratedValue
     private int productId;
     @Column(name="PRODUCT_NAME")
     private String productName;
