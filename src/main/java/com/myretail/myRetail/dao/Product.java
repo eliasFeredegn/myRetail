@@ -1,25 +1,22 @@
 package com.myretail.myRetail.dao;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.stereotype.Service;
-
+import org.springframework.stereotype.Component;
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@Component
 @Table(name="PRODUCTS")
 public class Product implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
     @Column(name="PRODUCT_ID")
-    @GeneratedValue
     private int productId;
     @Column(name="PRODUCT_NAME")
     private String productName;
     @Column(name="CURRENT_PRICE")
-    private double currentPrice;
+    private float currentPrice;
     @Column(name="CURRENCY_CODE")
     private String currencyCode;
 
@@ -42,11 +39,11 @@ public class Product implements Serializable {
         this.productName = productName;
     }
 
-    public double getCurrentPrice() {
+    public float getCurrentPrice() {
         return currentPrice;
     }
 
-    public void setCurrentPrice(double currentPrice) {
+    public void setCurrentPrice(float currentPrice) {
         this.currentPrice = currentPrice;
     }
 
