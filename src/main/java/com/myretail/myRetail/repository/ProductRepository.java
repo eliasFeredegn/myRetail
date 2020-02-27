@@ -1,6 +1,6 @@
 package com.myretail.myRetail.repository;
 
-import com.myretail.myRetail.dao.Product;
+import com.myretail.myRetail.Model.Product;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

@@ -1,4 +1,4 @@
-package com.myretail.myRetail.dao;
+package com.myretail.myRetail.Model;
 
 import org.springframework.stereotype.Component;
 import javax.persistence.*;

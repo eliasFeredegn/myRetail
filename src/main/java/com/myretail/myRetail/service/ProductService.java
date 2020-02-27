@@ -1,12 +1,18 @@
 package com.myretail.myRetail.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.myretail.myRetail.dao.Product;
+import com.myretail.myRetail.Model.Item;
+import com.myretail.myRetail.Model.Product;
+import com.myretail.myRetail.Model.ProductDescription;
+import com.myretail.myRetail.Model.ProductInfo;
 import com.myretail.myRetail.repository.ProductRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -15,9 +21,18 @@ public class ProductService {
 
     @Autowired
     private ProductRepository productRepository;
-
     @Autowired
-    private Product product;
+    private RestTemplate restTemplate;
+    @Autowired
+    private Item item;
+    @Autowired
+    private ProductDescription productDescription;
+    @Autowired
+    private ProductInfo productInfo;
+
+
+    @Value("https://redsky.target.com/v2/pdp/tcin/13860428?excludes=taxonomy,price,promotion,bulk_ship,rating_and_review_reviews,rating_and_review_statistics,question_answer_statistics")
+    private String url;
 
     private static final Logger logger = LogManager.getLogger(ProductService.class);
 
@@ -53,5 +68,13 @@ public class ProductService {
         return product.orElseThrow(() -> new Exception("Couldn't find a product with id: " + id));
     }
 
+    public void getProductInfo(){
+        ProductInfo product = restTemplate.getForObject(url, ProductInfo.class);
+
+        String name = product.getItem().getProductDescription().getName();
+
+        System.out.println(name);
+
+    }
 
 }
