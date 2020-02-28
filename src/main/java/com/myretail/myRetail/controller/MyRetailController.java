@@ -1,9 +1,7 @@
 package com.myretail.myRetail.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.myretail.myRetail.Model.AvailableToPromiseNetwork;
-import com.myretail.myRetail.Model.Product;
-import com.myretail.myRetail.Model.ProductInfo;
+import com.myretail.myRetail.dao.Product;
 import com.myretail.myRetail.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.web.client.RestTemplate;
 
 
 /**

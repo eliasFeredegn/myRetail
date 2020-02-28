@@ -1,6 +1,6 @@
 package com.myretail.myRetail.repository;
 
-import com.myretail.myRetail.Model.Product;
+import com.myretail.myRetail.dao.Product;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -17,3 +17,4 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
     @Query("UPDATE Product p SET p.currentPrice = :currentPrice WHERE p.id = :productId")
     int updatePrice(@Param("productId") int productId, @Param("currentPrice") float currentPrice);
 }
+

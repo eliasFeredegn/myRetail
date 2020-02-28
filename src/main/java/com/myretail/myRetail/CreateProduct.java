@@ -1,6 +1,6 @@
 package com.myretail.myRetail;
 
-import com.myretail.myRetail.Model.Product;
+import com.myretail.myRetail.dao.Product;
 
 public class CreateProduct {
     private Product product;

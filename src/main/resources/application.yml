@@ -1,10 +1,11 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/products
+    url: jdbc:mysql://localhost:3306/myRetail
     password:
     username: root
-    driver-class-name: "com.mysql.jdbc.Driver"
+    #driver-class-name: "com.mysql.jdbc.Driver"
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hiberante:
       ddl-auto: update
+

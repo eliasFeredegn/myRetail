@@ -1,4 +1,4 @@
-package com.myretail.myRetail.Model;
+package com.myretail.myRetail.dao;
 
 import org.springframework.stereotype.Component;
 import javax.persistence.*;
@@ -57,3 +57,4 @@ public class Product implements Serializable {
 
 
 }
+
