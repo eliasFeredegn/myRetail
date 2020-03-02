@@ -18,13 +18,16 @@ import java.util.Scanner;
 public class FileHandler {
 
     private String fileName = "price.txt";
+    Map<String, String> productPrices = new HashMap<>();
 
-    public String getPrice(int productId) throws FileNotFoundException {
+    public FileHandler() throws FileNotFoundException{
         Scanner input = new Scanner(new File(fileName));
-        Map<String, String> productPrices = new HashMap<>();
         while (input.hasNext()) {
             productPrices.put(input.next(), input.next());
         }
+    }
+
+    public String getPrice(int productId) throws FileNotFoundException {
 
         return productPrices.get(String.valueOf(productId));
     }
