@@ -1,6 +1,6 @@
 # Technology stack
 
- java, springboot, maven and log4j.
+ java, springboot, maven, log4j, spring data and mysql.
 
 # Testing
 
